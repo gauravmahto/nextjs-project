@@ -1,6 +1,12 @@
-import Image from 'next/image';
+import Link from 'next/link';
+
+import Counter from '../components/counter';
+import Logo from '../components/top/logo';
+
+// await m.connect('mongodb+srv://gauravmahto:V8orkq8Q66oyGus7@myfirstcluster.5qmjqdj.mongodb.net/?retryWrites=true&w=majority');
 
 export default function Home() {
+
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
@@ -16,16 +22,14 @@ export default function Home() {
             rel="noopener noreferrer"
           >
             By{' '}
-            <Image
-              src="/rock-on.svg"
-              alt="Rock On Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
+            <Logo />
           </a>
         </div>
+
+        <div>
+          <Counter />
+        </div>
+
       </div>
     </main>
   );
